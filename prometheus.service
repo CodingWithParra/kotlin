@@ -1,0 +1,11 @@
+[Unit]
+Description=Script de arranque de prometheus
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=1s
+ExecStart=/bin/bash /usr/local/bin/prometheus.sh
+
+[Install]
+WantedBy=multi-user.target
